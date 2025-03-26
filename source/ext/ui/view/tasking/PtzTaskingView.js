@@ -64,7 +64,12 @@ class PtzTaskingView extends View {
      * @param {String} options.dataSenderId -
      */
     constructor(divId, options) {
-        super(divId, [], options);
+        //super(divId, this.supportedLayers = ["Layer"], options);
+        super({
+            container: divId,
+            options,
+            supportedLayers: ["Layer"]
+        });
         let width = "640";
         let height = "480";
         this.css = "tasking";
